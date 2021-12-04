@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+  state = {
+    Message : 'Message Memo'
+  }
+  changeMessage = () =>{
+    this.setState({
+      Message : 'Change Message'
+    })
+  }
+  render(){
+    return <div>
+            <p>{this.state.Message}</p>
+            <button onClick={this.changeMessage}>Click Alert</button>
+            </div>
+  }
 }
 
 export default App;
