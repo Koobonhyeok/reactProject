@@ -1,8 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Prop from './Prop';
 
 class Body extends Component{
-    render() {
-        return <div><p>test</p></div>
+    render() {  
+        return (    
+                    <Prop  />
+        
+        )
     }
 }
 
