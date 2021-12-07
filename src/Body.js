@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
-import Prop from './Prop';
+import PhoneForm from './components/PhoneForm';
+
 
 class Body extends Component{
+    handleCreate = (data)=>{
+        console.log(data);
+    }
     render() {  
         return (    
-                    <Prop  />
-        
-        )
+            <div><PhoneForm onCreate={this.handleCreate} /></div>
+                
+                    
+        );
     }
 }
 
