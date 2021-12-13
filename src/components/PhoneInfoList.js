@@ -5,10 +5,23 @@ class PhoneInfoList extends Component{
     static defaultProps={
         data:[]
     }
+    // shouldComponentUpdate(nextProps, nextState){
+    //     return nextProps.data !== this.props.data;
+    // }
+    shouldComponentUpdate(nextProps, nextState) {
+        return nextProps.data !== this.props.data;
+    }
+
     render(){
-        const { data }= this.props;
+        console.log('render PhoneInfoList');
+        const { data, onRemove, onUpdate }= this.props;
         const list = data.map(
-            info => (<PhoneInfo key={info.id} info={info} />)
+            info => (<PhoneInfo 
+                        key={info.id} 
+                        info={info} 
+                        onRemove={onRemove}
+                        onUpdate={onUpdate}
+                    />)
         )
         return(
             <div>
