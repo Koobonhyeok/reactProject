@@ -2,7 +2,6 @@ import React, {Component} from "react";
 
 class Header extends Component{
     render(){
-        console.log(this.props)
         return (
             <div className="RCA-header-container">
                 <h2 className="RCA-header-calendarYM RCA-header-middle">
