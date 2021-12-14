@@ -1,19 +1,31 @@
 import React, { Component } from 'react'
+import Header from './components/main/Header';
+import MainPage from './components/main/MainPage';
+import moment from 'moment';
 
 class App extends Component{
-  state = {
-    Message : 'Message Memo'
+  state ={
+    calendarYM : moment(),
+    today : moment()
   }
-  changeMessage = () =>{
+  moveMonth = (month) =>{
     this.setState({
-      Message : 'Change Message'
+      calendarYM : this.state.calendarYM.add(month, 'M')
     })
   }
   render(){
-    return <div>
-            <p>{this.state.Message}</p>
-            <button onClick={this.changeMessage}>Click Alert</button>
-           </div>
+    return (
+      <div className='test-layout'>
+      <div className='RCA-app-container'>
+        <Header calendarYM={this.state.calendarYM.format("YYYY년 MM월")}
+                today={this.state.today.format("현재 YYYY - MM - DD")} 
+                moveMonth={this.moveMonth}
+                />
+        <MainPage />
+      </div>
+    </div>
+    )
+    
   }
 }
 

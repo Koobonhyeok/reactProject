@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Body from './components/Body';
-import "./App.css";
+import App from './App';
+import './css/RCA.css'
 
-ReactDOM.render(  <Body />,  document.getElementById('root') );
+ReactDOM.render(  
+    <App />
+    ,  document.getElementById('root') );
