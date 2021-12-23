@@ -21,7 +21,7 @@ class App extends Component{
                 today={this.state.today.format("현재 YYYY - MM - DD")} 
                 moveMonth={this.moveMonth}
                 />
-        <MainPage />
+        <MainPage YM={this.state.calendarYM.format("YYYY-MM-DD")}/>
       </div>
     </div>
     )
