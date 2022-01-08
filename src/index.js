@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-// import Prop from './Prop';
+// import Codingapple from './Codingapple';
+import CalendarMain from './CalendarMain';
 import './css/RCA.css'
 
 ReactDOM.render(  
-    <App />
-    // <Prop />
+    <CalendarMain />
     ,  document.getElementById('root') );

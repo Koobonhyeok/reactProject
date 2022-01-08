@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, {Component, useEffect} from "react";
 import Schedule from "./Schedule";
 import moment from "moment";
 
@@ -51,19 +51,9 @@ class DateHeader extends Component{
     }
 }
 
+
 class Week extends Component {
-    
-      state ={
-        date : [
-            {
-                1:'2021-12-27'
-            },
-            {
-                2:'2021-12-01'
-            }
-        ]
-    }
-   
+  
     Days = (firstDayFormat) => {
       const _days = [];
       for (let i = 0; i < 7; i++) {
@@ -76,7 +66,7 @@ class Week extends Component {
           isHolyDay: false
         });
       }
-   
+
       return _days;
     }
    
