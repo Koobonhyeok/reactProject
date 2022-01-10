@@ -7,6 +7,7 @@ import moment from 'moment';
 import axios from 'axios';
 
 function CalendarMain(){
+    
     let [calendarYM, changeCalendatYM] = useState(moment().format('YYYY MM'));
     let [yyyyMMdd, changeYyyyMMdd] = useState(moment().format('YYYY MM DD'));
     let [num, changeNum] = useState(moment().format('YYYY MM'));
@@ -62,9 +63,9 @@ function CalendarMain(){
     return (
         <div>
             <CalendarTitle 
-                calendarYM={calendarYM}
-                today={yyyyMMdd}
-                moveMonthFn={moveMonthFn}
+                // calendarYM={calendarYM}
+                // today={yyyyMMdd}
+                // moveMonthFn={moveMonthFn}
                 />
             <CalendarBody
                 YM={calendarYM}

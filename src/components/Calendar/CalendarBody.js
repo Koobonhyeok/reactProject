@@ -5,15 +5,15 @@ import moment from 'moment';
 
 function CalendarBody(props){
 
-    function Week(monthYear){
-        
+      function Week(monthYear){
+
         const firstDayOfMonth = moment(monthYear).startOf('month');
         const firstDateOfMonth = firstDayOfMonth.get('d');
         
         const firstDayOfWeek = firstDayOfMonth.clone().add('d', -firstDateOfMonth);
         // const lastDayOfThisCalendar = dayOfThisCalendar.clone().add('d', 6 * 7);
         const _Weeks = [];
-     
+    
         for (let i = 0; i < 6; i++) {
           _Weeks.push((
             <Draw 
@@ -26,7 +26,8 @@ function CalendarBody(props){
           ))
         }
         return _Weeks
-    }
+    }  
+
     function clickDate(date){
         
         props.clickDateFn(date);

@@ -1,15 +1,17 @@
 /* eslint-disable */
 import React, {useState} from "react";
+import Test from "./Test";
 import './css/Codingapple.css'
 
 function Codingapple(){
+    console.log("test");
     let [title, changeTitle] = useState(['제목1', '제목2'])
     let [count, changeCount] = useState(0);
 
     let [modal, changeModal] = useState(false);
     let [modalTitle, changeModalTitle] = useState(title[0]);
 
-    let [contents, changeContents] = useState('');
+    let [contents, changeContents] = useState('asd');
 
     function titleChange(){
         var newArray = [ ...title ];
@@ -72,6 +74,7 @@ function Codingapple(){
             {
                 modal === true? <Modal modalTitle={modalTitle} /> : null
             }
+            <Test data={contents}/>
         </div>
     );
 }

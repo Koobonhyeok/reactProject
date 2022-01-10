@@ -1,14 +1,14 @@
 import React from "react";
 
 function CalendarTitle(props){
-
+    console.log("test")
     return (
         <div className="RCA-header-container">
             <h2 className="RCA-header-calendarYM RCA-header-middle">
-                {props.calendarYM}
+                {/* {props.calendarYM} */}
             </h2>
             <h3 className="RCA-header-today RCA-header-middle">
-                {props.today}
+                {/* {props.today} */}
             </h3>
             <ul className="RCA-header-buttons RCA-header-middle">
                 <li>

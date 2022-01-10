@@ -1,6 +1,5 @@
 /* eslint-disable */
 import React, {useState} from "react";
-import { Form } from 'react-advanced-form'
 import axios from 'axios';
 
 function CalendarFooter(props){
@@ -118,21 +117,16 @@ function EmptyDraw(){
         
     }
     
-    handleButtonClick=()=>{
-        this.form.serialize()
-    }
     function RegistInput(){
         return (
             <div>
-                <Form ref={form => this.form = form}>
-                    <p>
-                        <b> 제목 : </b> <input name="title" onChange={ handleChange } value={values.title} />
-                    </p>
-                    <p>
-                        <b> 내용 : </b> <input name="contents" onChange={ handleChange } value={values.contents} />
-                    </p>
-                    <button type="submit" onClick={ ()=>{handleButtonClick} } >저장</button>
-                </Form>
+                <p>
+                    <b> 제목 : </b> <input name="title" onChange={ handleChange } value={values.title} />
+                </p>
+                <p>
+                    <b> 내용 : </b> <input name="contents" onChange={ handleChange } value={values.contents} />
+                </p>
+                <button type="submit" onClick={ ()=>{handleButtonClick} } >저장</button>
             </div>
         )
     }
